@@ -37,17 +37,7 @@ const bundles = [
     iconColor: "bg-green-500",
     highlighted: false,
   },
-  {
-    category: "TECHNOLOGY",
-    title: "Tech Stack Bundle",
-    description: "Development tools, version control, deployment, and monitoring working in perfect harmony.",
-    tools: ["Code Repository", "CI/CD Pipeline", "Monitoring", "Documentation"],
-    workflows: 15,
-    savings: 250,
-    icon: Code,
-    iconColor: "bg-orange-500",
-    highlighted: false,
-  },
+
 ];
 
 const BundlesSection = () => {
@@ -65,18 +55,18 @@ const BundlesSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {bundles.map((bundle) => {
             const Icon = bundle.icon;
             return (
               <Card
                 key={bundle.title}
-                className={`border-2 p-6 transition-all hover:shadow-xl ${
+                className={`border-2 p-5 transition-all hover:shadow-xl ${
                   bundle.highlighted ? "border-primary bg-primary/5" : "border-border"
                 }`}
               >
                 <div className="mb-3 flex items-center gap-3">
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${bundle.iconColor}`}>
+                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${bundle.iconColor}`}>
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <Badge variant="secondary" className="text-xs font-semibold text-muted-foreground">
@@ -114,6 +104,9 @@ const BundlesSection = () => {
               </Card>
             );
           })}
+        </div>
+        <div className="mt-10 text-center">
+          <Button variant="outline" size="lg">See more</Button>
         </div>
       </div>
     </section>

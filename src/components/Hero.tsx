@@ -13,12 +13,11 @@ const Hero = () => {
           </Badge>
 
           <h1 className="mb-6 max-w-5xl animate-fade-in text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
-            Transform Your Business Operations with All-in-One Automation
+            Transform Your Business Operations with One Click Automations
           </h1>
 
           <p className="mb-10 max-w-2xl animate-fade-in text-lg text-muted-foreground md:text-xl">
-            Automate workflows, cut costs, and empower your team to do more—faster. 
-            Manage IT, HR, and workplace operations from one powerful platform.
+          Bring your tools together, automate repetitive work, and run your entire business through one smart, connected platform built for growth.
           </p>
 
           <div className="mb-5 flex flex-col gap-4 animate-fade-in sm:flex-row">
