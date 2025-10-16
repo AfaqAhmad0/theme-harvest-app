@@ -19,7 +19,7 @@ const Hero = () => {
           <p className="mb-10 max-w-2xl animate-fade-in text-lg text-muted-foreground md:text-xl">
           Bring your tools together, automate repetitive work, and run your entire business through one smart, connected platform built for growth.
           </p>
-
+{/* Button to get started free */}
           <div className="mb-5 flex flex-col gap-4 animate-fade-in sm:flex-row">
             <Button size="lg" className="text-base font-semibold shadow-lg hover-scale">
               Get Started Free
