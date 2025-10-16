@@ -32,14 +32,14 @@ const softwareDeals = [
 
 const LifetimeSoftwareSection = () => {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mb-4 text-center">
+        <div className="mb-3 text-center">
           <Badge variant="secondary" className="bg-primary/10 text-primary">
             Discover More
           </Badge>
         </div>
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Plus: Lifetime Software Deals
           </h2>
@@ -49,20 +49,20 @@ const LifetimeSoftwareSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {softwareDeals.map((deal) => (
             <Card
               key={deal.name}
-              className={`border-2 p-8 transition-all hover:shadow-xl ${
+              className={`border-2 p-6 transition-all hover:shadow-xl ${
                 deal.highlighted ? "border-primary" : "border-border"
               }`}
             >
-              <Badge variant="secondary" className="mb-4 bg-primary text-primary-foreground">
+              <Badge variant="secondary" className="mb-3 bg-primary text-primary-foreground">
                 {deal.badge}
               </Badge>
 
               <h3 className="mb-2 text-2xl font-bold text-foreground">{deal.name}</h3>
-              <p className="mb-6 text-sm text-muted-foreground">{deal.description}</p>
+              <p className="mb-5 text-sm text-muted-foreground">{deal.description}</p>
 
               <div className="mb-6">
                 <div className="mb-1 flex items-baseline gap-2">

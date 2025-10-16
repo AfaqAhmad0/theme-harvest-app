@@ -52,9 +52,9 @@ const bundles = [
 
 const BundlesSection = () => {
   return (
-    <section id="bundles" className="py-20 md:py-32">
+    <section id="bundles" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Department-Specific Solutions
           </h2>
@@ -65,30 +65,30 @@ const BundlesSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {bundles.map((bundle) => {
             const Icon = bundle.icon;
             return (
               <Card
                 key={bundle.title}
-                className={`border-2 p-8 transition-all hover:shadow-xl ${
+                className={`border-2 p-6 transition-all hover:shadow-xl ${
                   bundle.highlighted ? "border-primary bg-primary/5" : "border-border"
                 }`}
               >
-                <div className="mb-4 flex items-center gap-3">
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${bundle.iconColor}`}>
-                    <Icon className="h-7 w-7 text-white" />
+                <div className="mb-3 flex items-center gap-3">
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${bundle.iconColor}`}>
+                    <Icon className="h-6 w-6 text-white" />
                   </div>
                   <Badge variant="secondary" className="text-xs font-semibold text-muted-foreground">
                     {bundle.category}
                   </Badge>
                 </div>
 
-                <h3 className="mb-3 text-2xl font-bold text-foreground">{bundle.title}</h3>
-                <p className="mb-6 text-muted-foreground">{bundle.description}</p>
+                <h3 className="mb-2 text-2xl font-bold text-foreground">{bundle.title}</h3>
+                <p className="mb-5 text-muted-foreground">{bundle.description}</p>
 
-                <div className="mb-6">
-                  <h4 className="mb-3 text-sm font-semibold text-foreground">Included Tools:</h4>
+                <div className="mb-5">
+                  <h4 className="mb-2 text-sm font-semibold text-foreground">Included Tools:</h4>
                   <div className="flex flex-wrap gap-2">
                     {bundle.tools.map((tool) => (
                       <Badge key={tool} variant="outline" className="bg-card">
@@ -98,7 +98,7 @@ const BundlesSection = () => {
                   </div>
                 </div>
 
-                <div className="mb-6 space-y-2 border-t border-border pt-6">
+                <div className="mb-5 space-y-2 border-t border-border pt-5">
                   <div className="text-sm">
                     <span className="text-primary font-semibold">{bundle.workflows} pre-connected workflows</span>
                     <span className="text-muted-foreground"> ready to activate</span>

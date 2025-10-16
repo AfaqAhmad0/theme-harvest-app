@@ -26,9 +26,9 @@ const RecognitionSection = () => {
   ];
 
   return (
-    <section className="border-y border-border bg-card py-16">
+    <section className="border-y border-border bg-card py-12">
       <div className="container mx-auto px-4">
-        <div className="mb-8 text-center">
+        <div className="mb-6 text-center">
           <Badge variant="secondary" className="bg-primary/10 text-primary">
             RATINGS & RECOGNITION
           </Badge>

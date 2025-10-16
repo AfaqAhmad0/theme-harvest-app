@@ -16,17 +16,17 @@ const steps = [
   },
   {
     number: "3",
-    title: "Start Creating Workflows",
-    description: "Use pre-built workflow templates or create unlimited custom workflows with your bundle's tools.",
+    title: "Scale Anytime",
+    description: "Expand workflows and teams on demand—grow without retooling or complex migrations.",
     icon: Workflow,
   },
 ];
 
 const StepsSection = () => {
   return (
-    <section className="bg-secondary/30 py-20 md:py-32">
+    <section className="bg-secondary/30 py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Get Started in Minutes
           </h2>
@@ -35,28 +35,28 @@ const StepsSection = () => {
           </p>
         </div>
 
-        <div className="relative grid gap-8 md:grid-cols-3">
+        <div className="relative grid gap-6 md:grid-cols-3">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div key={step.number} className="relative flex flex-col items-center">
                 {index < steps.length - 1 && (
-                  <div className="absolute left-[60%] top-[80px] hidden h-[2px] w-[calc(100%+2rem)] bg-border md:block" />
+                  <div className="absolute left-[60%] top-[80px] hidden h-[2px] w-[calc(100%+1.5rem)] bg-border md:block" />
                 )}
-                <div className="relative z-10 mb-6 flex h-32 w-32 items-center justify-center rounded-3xl bg-primary shadow-lg">
-                  <Icon className="h-16 w-16 text-primary-foreground" strokeWidth={1.5} />
+                <div className="relative z-10 mb-5 flex h-28 w-28 items-center justify-center rounded-3xl bg-primary shadow-lg">
+                  <Icon className="h-14 w-14 text-primary-foreground" strokeWidth={1.5} />
                 </div>
                 <div className="text-center">
                   <p className="mb-2 text-sm font-semibold text-primary">STEP {step.number}</p>
-                  <h3 className="mb-3 text-xl font-bold text-foreground">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <h3 className="mb-2 text-xl font-bold text-foreground">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <p className="text-sm font-medium text-muted-foreground">
             Average activation time: <span className="font-bold text-foreground">Under 60 seconds</span>
           </p>

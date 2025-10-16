@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Clock, Shield, DollarSign, Globe, Gauge, Lock } from "lucide-react";
+import { Clock, Shield, DollarSign, Globe, Gauge, Lock, Infinity, Gift } from "lucide-react";
 
 const benefits = [
   {
@@ -32,11 +32,21 @@ const benefits = [
     title: "Enterprise-Grade Reliability",
     description: "99.9% uptime SLA, automated backups, and 24/7 monitoring. Built for mission-critical operations.",
   },
+  {
+    icon: Infinity,
+    title: "Lifetime Software",
+    description: "Add handpicked lifetime tools that connect seamlessly to your workflows.",
+  },
+  {
+    icon: Gift,
+    title: "50+ Free MTP Tools",
+    description: "Access a growing suite of free tools bundled with MyTechPassport.",
+  },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
@@ -47,20 +57,20 @@ const BenefitsSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <Card
                 key={benefit.title}
-                className="group border-2 p-8 transition-all hover:border-primary hover:shadow-lg animate-fade-in"
+                className="group border-2 p-6 transition-all hover:border-primary hover:shadow-lg animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
-                  <Icon className="h-7 w-7 text-primary transition-colors group-hover:text-primary-foreground" />
+                <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                  <Icon className="h-6 w-6 text-primary transition-colors group-hover:text-primary-foreground" />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-foreground">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+                <h3 className="mb-2 text-lg font-bold text-foreground">{benefit.title}</h3>
+                <p className="text-sm text-muted-foreground">{benefit.description}</p>
               </Card>
             );
           })}

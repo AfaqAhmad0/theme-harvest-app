@@ -26,9 +26,9 @@ const features = [
 
 const FeaturesTableSection = () => {
   return (
-    <section className="bg-secondary/30 py-20 md:py-32">
+    <section className="bg-secondary/30 py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             How We Help Your Business
           </h2>
@@ -37,15 +37,15 @@ const FeaturesTableSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-2">
           {features.map((feature, index) => (
             <Card
               key={feature.category}
-              className="border-2 p-8 animate-fade-in"
+              className="border-2 p-6 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="mb-3 text-2xl font-bold text-foreground">{feature.category}</h3>
-              <p className="mb-6 text-muted-foreground">{feature.description}</p>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">{feature.category}</h3>
+              <p className="mb-5 text-muted-foreground">{feature.description}</p>
               <ul className="space-y-3">
                 {feature.benefits.map((benefit) => (
                   <li key={benefit} className="flex items-start gap-3">

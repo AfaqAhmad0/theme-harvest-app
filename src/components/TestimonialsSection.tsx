@@ -24,9 +24,9 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Success Stories
           </h2>
@@ -35,16 +35,16 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.author}
-              className="border-2 p-8 animate-fade-in hover:border-primary transition-all hover:shadow-lg"
+              className="border-2 p-6 animate-fade-in hover:border-primary transition-all hover:shadow-lg"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Quote className="mb-4 h-10 w-10 text-primary/20" />
-              <p className="mb-6 text-foreground leading-relaxed">"{testimonial.quote}"</p>
-              <div className="border-t border-border pt-4">
+              <Quote className="mb-3 h-10 w-10 text-primary/20" />
+              <p className="mb-5 text-foreground leading-relaxed">"{testimonial.quote}"</p>
+              <div className="border-t border-border pt-3">
                 <p className="font-semibold text-foreground">{testimonial.author}</p>
                 <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                 <p className="text-sm text-primary">{testimonial.company}</p>

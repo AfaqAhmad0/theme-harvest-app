@@ -4,7 +4,7 @@ import { Zap, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-20 md:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <Badge variant="secondary" className="mb-8 animate-fade-in px-6 py-2 text-sm font-medium">
@@ -21,7 +21,7 @@ const Hero = () => {
             Manage IT, HR, and workplace operations from one powerful platform.
           </p>
 
-          <div className="mb-6 flex flex-col gap-4 animate-fade-in sm:flex-row">
+          <div className="mb-5 flex flex-col gap-4 animate-fade-in sm:flex-row">
             <Button size="lg" className="text-base font-semibold shadow-lg hover-scale">
               Get Started Free
             </Button>
@@ -31,7 +31,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          <p className="mb-12 text-sm text-muted-foreground">
+          <p className="mb-10 text-sm text-muted-foreground">
             Free 30-day trial • No credit card required • 2 workflows free forever
           </p>
 
