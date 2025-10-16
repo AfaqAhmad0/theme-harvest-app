@@ -35,20 +35,20 @@ const benefits = [
   {
     icon: Infinity,
     title: "Lifetime Software",
-    description: "Add handpicked lifetime tools that connect seamlessly to your workflows.",
+    description: "Add handpicked lifetime tools that connect seamlessly to your workflows. Try free for a month, then own forever.",
   },
   {
     icon: Gift,
-    title: "50+ Free MTP Tools",
+    title: "30+ Free MTP Tools",
     description: "Access a growing suite of free tools bundled with MyTechPassport.",
   },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-8 md:py-12">
       <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-8 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Why Choose MyTechPassport?
           </h2>

@@ -9,9 +9,9 @@ const TrustedBySection = () => {
   ];
 
   return (
-    <section className="border-y border-border bg-card py-10">
+    <section className="border-y border-border bg-card py-6">
       <div className="container mx-auto px-4">
-        <p className="mb-6 text-center text-sm font-medium text-muted-foreground">
+        <p className="mb-3 text-center text-sm font-medium text-muted-foreground">
           TRUSTED BY LEADING STARTUPS AND AGENCIES
         </p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">

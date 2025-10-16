@@ -4,7 +4,7 @@ import { Zap, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <Badge variant="secondary" className="mb-8 animate-fade-in px-6 py-2 text-sm font-medium">
@@ -12,9 +12,12 @@ const Hero = () => {
             Trusted by 10,000+ businesses worldwide
           </Badge>
 
-          <h1 className="mb-6 max-w-5xl animate-fade-in text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
-          From Chaos To Connections, Automate Your Entire Tech Stack.
+          <h1 className="mb-4 max-w-5xl animate-fade-in text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+          Unlock Effortless Automation, Connect All Your Tools in Few Clicks
           </h1>
+          <p className="mb-6 text-lg font-medium text-primary animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Set Up in 10 Minutes
+          </p>
 
           <p className="mb-10 max-w-2xl animate-fade-in text-lg text-muted-foreground md:text-xl">
           Bring your tools together, automate repetitive work, and run your entire business through one smart, connected platform built for growth.

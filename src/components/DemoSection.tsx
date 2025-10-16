@@ -4,7 +4,7 @@ import { Play, Calendar, FileText } from "lucide-react";
 
 const DemoSection = () => {
   return (
-    <section className="bg-gradient-to-b from-background to-secondary/30 py-16 md:py-24">
+    <section className="bg-gradient-to-b from-background to-secondary/30 py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">

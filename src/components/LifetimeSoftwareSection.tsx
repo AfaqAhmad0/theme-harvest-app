@@ -32,7 +32,7 @@ const softwareDeals = [
 
 const LifetimeSoftwareSection = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="mb-3 text-center">
           <Badge variant="secondary" className="bg-primary/10 text-primary">
