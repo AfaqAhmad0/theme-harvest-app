@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { TrendingUp, Briefcase, Users, Code } from "lucide-react";
 
 const bundles = [
   {
@@ -10,6 +11,9 @@ const bundles = [
     tools: ["CRM", "Email Platform", "Landing Pages", "Analytics"],
     workflows: 12,
     savings: 200,
+    icon: TrendingUp,
+    iconColor: "bg-purple-500",
+    highlighted: false,
   },
   {
     category: "OPERATIONS",
@@ -18,6 +22,9 @@ const bundles = [
     tools: ["Project Manager", "Time Tracker", "Invoicing", "Client Portal"],
     workflows: 10,
     savings: 180,
+    icon: Briefcase,
+    iconColor: "bg-blue-500",
+    highlighted: true,
   },
   {
     category: "CONSULTANCY",
@@ -26,6 +33,9 @@ const bundles = [
     tools: ["Client CRM", "Proposal Tool", "E-Signature", "Knowledge Base"],
     workflows: 8,
     savings: 150,
+    icon: Users,
+    iconColor: "bg-green-500",
+    highlighted: false,
   },
   {
     category: "TECHNOLOGY",
@@ -34,6 +44,9 @@ const bundles = [
     tools: ["Code Repository", "CI/CD Pipeline", "Monitoring", "Documentation"],
     workflows: 15,
     savings: 250,
+    icon: Code,
+    iconColor: "bg-orange-500",
+    highlighted: false,
   },
 ];
 
@@ -53,40 +66,54 @@ const BundlesSection = () => {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {bundles.map((bundle) => (
-            <Card key={bundle.title} className="border-2 p-8 transition-all hover:border-primary hover:shadow-xl">
-              <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary">
-                {bundle.category}
-              </Badge>
-              
-              <h3 className="mb-3 text-2xl font-bold text-foreground">{bundle.title}</h3>
-              <p className="mb-6 text-muted-foreground">{bundle.description}</p>
-
-              <div className="mb-6">
-                <h4 className="mb-3 text-sm font-semibold text-foreground">Included Tools:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {bundle.tools.map((tool) => (
-                    <Badge key={tool} variant="outline">
-                      {tool}
-                    </Badge>
-                  ))}
+          {bundles.map((bundle) => {
+            const Icon = bundle.icon;
+            return (
+              <Card
+                key={bundle.title}
+                className={`border-2 p-8 transition-all hover:shadow-xl ${
+                  bundle.highlighted ? "border-primary bg-primary/5" : "border-border"
+                }`}
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${bundle.iconColor}`}>
+                    <Icon className="h-7 w-7 text-white" />
+                  </div>
+                  <Badge variant="secondary" className="text-xs font-semibold text-muted-foreground">
+                    {bundle.category}
+                  </Badge>
                 </div>
-              </div>
 
-              <div className="mb-6 space-y-2 border-t border-border pt-6">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">{bundle.workflows} pre-connected workflows ready to activate</span>
-                </div>
-                <div className="flex items-center justify-between text-sm font-semibold">
-                  <span className="text-primary">Save ${bundle.savings}/month vs. separate tools</span>
-                </div>
-              </div>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">{bundle.title}</h3>
+                <p className="mb-6 text-muted-foreground">{bundle.description}</p>
 
-              <Button className="w-full" size="lg">
-                Activate Bundle
-              </Button>
-            </Card>
-          ))}
+                <div className="mb-6">
+                  <h4 className="mb-3 text-sm font-semibold text-foreground">Included Tools:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {bundle.tools.map((tool) => (
+                      <Badge key={tool} variant="outline" className="bg-card">
+                        {tool}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6 space-y-2 border-t border-border pt-6">
+                  <div className="text-sm">
+                    <span className="text-primary font-semibold">{bundle.workflows} pre-connected workflows</span>
+                    <span className="text-muted-foreground"> ready to activate</span>
+                  </div>
+                  <div className="text-sm font-bold text-foreground">
+                    Save ${bundle.savings}/month vs. separate tools
+                  </div>
+                </div>
+
+                <Button className="w-full" size="lg">
+                  Activate Bundle →
+                </Button>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

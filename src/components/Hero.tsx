@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Zap } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <Badge variant="secondary" className="mb-8 px-6 py-2 text-sm font-medium">
-            <span className="mr-2">✨</span>
+            <Zap className="mr-2 h-4 w-4" />
             10,000+ businesses automated and counting
           </Badge>
 

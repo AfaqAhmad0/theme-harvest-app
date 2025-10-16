@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { X, Check } from "lucide-react";
+import { XCircle, CheckCircle2 } from "lucide-react";
 
 const ComparisonSection = () => {
   return (
@@ -15,63 +15,59 @@ const ComparisonSection = () => {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          <Card className="border-2 border-destructive/20 bg-card p-8">
+          <Card className="border-2 bg-red-50/50 p-8 dark:bg-red-950/20">
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
-                <X className="h-6 w-6 text-destructive" />
-              </div>
+              <XCircle className="h-10 w-10 text-red-500" />
               <h3 className="text-2xl font-bold text-foreground">The Old Way</h3>
             </div>
             <ul className="space-y-4">
               <li className="flex gap-3 text-muted-foreground">
-                <span>•</span>
+                <XCircle className="h-5 w-5 flex-shrink-0 text-red-500" />
                 <span>Buy 5 different tools at "great prices"</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
-                <span>•</span>
+                <XCircle className="h-5 w-5 flex-shrink-0 text-red-500" />
                 <span>Each tool sits alone in its own dashboard</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
-                <span>•</span>
+                <XCircle className="h-5 w-5 flex-shrink-0 text-red-500" />
                 <span>Spend weeks learning API integrations</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
-                <span>•</span>
+                <XCircle className="h-5 w-5 flex-shrink-0 text-red-500" />
                 <span>Data doesn't sync, workflows break</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
-                <span>•</span>
+                <XCircle className="h-5 w-5 flex-shrink-0 text-red-500" />
                 <span>Tools collect dust while you do everything manually</span>
               </li>
             </ul>
           </Card>
 
-          <Card className="border-2 border-primary/30 bg-card p-8 shadow-lg">
+          <Card className="border-2 border-primary bg-primary/5 p-8 shadow-lg dark:bg-primary/10">
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <Check className="h-6 w-6 text-primary" />
-              </div>
+              <CheckCircle2 className="h-10 w-10 text-primary" />
               <h3 className="text-2xl font-bold text-foreground">The MyTechPassport Way</h3>
             </div>
             <ul className="space-y-4">
               <li className="flex gap-3 text-foreground">
-                <span className="text-primary">✓</span>
+                <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
                 <span>Buy a bundle with all tools included</span>
               </li>
               <li className="flex gap-3 text-foreground">
-                <span className="text-primary">✓</span>
-                <span>Tools are pre-connected and talking to each other</span>
+                <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
+                <span>Tools are <strong>pre-connected</strong> and talking to each other</span>
               </li>
               <li className="flex gap-3 text-foreground">
-                <span className="text-primary">✓</span>
-                <span>Click "Activate" and start working immediately</span>
+                <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
+                <span>Click "Activate" and <strong>start working immediately</strong></span>
               </li>
               <li className="flex gap-3 text-foreground">
-                <span className="text-primary">✓</span>
+                <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
                 <span>Data flows automatically between all your tools</span>
               </li>
               <li className="flex gap-3 text-foreground">
-                <span className="text-primary">✓</span>
+                <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
                 <span>Focus on growth while automation handles the rest</span>
               </li>
             </ul>

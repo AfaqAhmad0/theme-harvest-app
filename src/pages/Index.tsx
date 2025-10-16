@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import StepsSection from "@/components/StepsSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import BundlesSection from "@/components/BundlesSection";
+import LifetimeSoftwareSection from "@/components/LifetimeSoftwareSection";
+import PricingSection from "@/components/PricingSection";
 
 const Index = () => {
   return (
@@ -12,6 +14,8 @@ const Index = () => {
       <StepsSection />
       <ComparisonSection />
       <BundlesSection />
+      <LifetimeSoftwareSection />
+      <PricingSection />
     </div>
   );
 };

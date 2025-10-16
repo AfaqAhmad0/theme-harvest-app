@@ -30,7 +30,7 @@ const Navigation = () => {
           <Button variant="ghost" className="text-sm font-medium">
             Login
           </Button>
-          <Button className="text-sm font-semibold">Get Started Free</Button>
+          <Button className="text-sm font-semibold">Go to Dashboard</Button>
         </div>
       </div>
     </nav>
