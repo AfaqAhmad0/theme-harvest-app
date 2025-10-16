@@ -99,14 +99,14 @@ const BundlesSection = () => {
                 </div>
 
                 <Button className="w-full" size="lg">
-                  Activate Bundle →
+                  Connect Now →
                 </Button>
               </Card>
             );
           })}
         </div>
         <div className="mt-10 text-center">
-          <Button variant="outline" size="lg">See more</Button>
+          <Button size="lg">See more</Button>
         </div>
       </div>
     </section>

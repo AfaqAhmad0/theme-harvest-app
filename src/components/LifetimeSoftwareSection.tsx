@@ -82,6 +82,9 @@ const LifetimeSoftwareSection = () => {
             </Card>
           ))}
         </div>
+        <div className="mt-10 text-center">
+          <Button size="lg">See more</Button>
+        </div>
       </div>
     </section>
   );
