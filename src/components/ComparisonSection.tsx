@@ -3,14 +3,14 @@ import { XCircle, CheckCircle2 } from "lucide-react";
 
 const ComparisonSection = () => {
   return (
-    <section className="bg-secondary/30 py-20 md:py-32">
+    <section className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-            Why Most Software Sits Unused
+            Stop Wasting Time on Integration
           </h2>
           <p className="text-lg text-muted-foreground">
-            You buy tools with great intentions, but connecting them becomes your full-time job.
+            Traditional tools require weeks of setup. MyTechPassport works instantly.
           </p>
         </div>
 

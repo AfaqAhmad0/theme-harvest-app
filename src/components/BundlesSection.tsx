@@ -56,12 +56,12 @@ const BundlesSection = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-            Choose Your Bundle
+            Department-Specific Solutions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Each bundle is a complete business system with tools that work together from day one.
+            Complete business systems with pre-integrated tools that work together from day one.
             <br />
-            Pick your department and start automating immediately.
+            Pick your department and activate in 60 seconds.
           </p>
         </div>
 

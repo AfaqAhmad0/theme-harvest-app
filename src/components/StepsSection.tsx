@@ -24,11 +24,11 @@ const steps = [
 
 const StepsSection = () => {
   return (
-    <section className="py-20 md:py-32">
+    <section className="bg-secondary/30 py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-            From Bundle to Business in 3 Steps
+            Get Started in Minutes
           </h2>
           <p className="text-lg text-muted-foreground">
             No technical expertise needed. No weeks of setup. Just instant automation.
