@@ -13,7 +13,7 @@ const Hero = () => {
           </Badge>
 
           <h1 className="mb-6 max-w-5xl animate-fade-in text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
-            Transform Your Business Operations with One Click Automations
+          From Chaos To Connections, Automate Your Entire Tech Stack.
           </h1>
 
           <p className="mb-10 max-w-2xl animate-fade-in text-lg text-muted-foreground md:text-xl">

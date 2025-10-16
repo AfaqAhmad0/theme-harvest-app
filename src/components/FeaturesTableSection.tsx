@@ -3,24 +3,45 @@ import { Check } from "lucide-react";
 
 const features = [
   {
-    category: "IT Automation",
-    description: "Onboard/offboard users, manage devices, apps, and access—all from one dashboard.",
-    benefits: ["Automated user provisioning", "Device management", "App deployment", "Access control"],
+    category: "Connected Tech Bundles",
+    description: "Get pre-built bundles of tools designed to work together from day one.",
+    benefits: [
+      "Two free workflows included",
+      "Ready-to-use bundles for every department",
+      "Works with your existing tools or new ones",
+      "No setup hassle—just plug and go",
+    ],
   },
   {
-    category: "Workflow Studio",
-    description: "Hundreds of pre-built templates for HR, operations, marketing, and more.",
-    benefits: ["500+ workflow templates", "Drag-and-drop builder", "Custom integrations", "Real-time sync"],
+    category: "Workflow Automation",
+    description: "Turn disconnected apps into one seamless system.",
+    benefits: [
+      "Run 2 free workflows instantly",
+      "Just $99/mo for unlimited automation",
+      "Custom workflow design available",
+      "Integrate any MTP or external tools",
+    ],
   },
   {
-    category: "Team Analytics",
-    description: "Get insights on productivity, process bottlenecks, and optimization opportunities.",
-    benefits: ["Performance dashboards", "Process analytics", "Custom reports", "Predictive insights"],
+    category: "AI Tool Finder",
+    description: "Discover the best tools for your business in seconds.",
+    benefits: [
+      "Smart recommendations based on your goals",
+      "Compare tools across vendors",
+      "Mix and match MTP tools with others you already use",
+      "Personalized stack suggestions",
+    ],
   },
+  
   {
-    category: "Unified Billing",
-    description: "One subscription includes everything. No hidden fees, no surprise charges.",
-    benefits: ["All bundles included", "Predictable pricing", "Volume discounts", "Cancel anytime"],
+    category: "Simple Credits & Billing",
+    description: "Flexible pricing with no hidden fees or contracts.",
+    benefits: [
+      "Free access to MTP tools",
+      "Buy vendor tools using credits ($1 = 1 credit)",
+      "Transparent 10% vendor commission",
+      "Cancel or recharge anytime",
+    ],
   },
 ];
 

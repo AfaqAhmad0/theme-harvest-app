@@ -12,14 +12,14 @@ const PricingSection = () => {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-muted-foreground">
-            Start free with 2 workflows for life. Upgrade when you're ready to unlock unlimited automation.
+          Start free with two pre-connected workflows. Upgrade anytime to unlock unlimited automation and full access to every bundle.
           </p>
         </div>
 
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2">
           <Card className="border-2 p-8">
             <h3 className="mb-2 text-3xl font-bold text-foreground">Free Forever</h3>
-            <p className="mb-6 text-muted-foreground">Perfect to get started and see the value</p>
+            <p className="mb-6 text-muted-foreground">Perfect for getting started and exploring how My Tech Passport works</p>
 
             <div className="mb-8">
               <div className="mb-1 flex items-baseline gap-2">
@@ -62,7 +62,7 @@ const PricingSection = () => {
             <Badge className="absolute -top-3 right-8 bg-primary">Most Popular</Badge>
 
             <h3 className="mb-2 text-3xl font-bold text-foreground">All Bundles</h3>
-            <p className="mb-6 text-muted-foreground">Unlimited automation for your entire business</p>
+            <p className="mb-6 text-muted-foreground">Everything your business needs to automate and connect every tool</p>
 
             <div className="mb-2">
               <div className="mb-1 flex items-baseline gap-2">
