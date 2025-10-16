@@ -32,13 +32,13 @@ const Hero = () => {
           </div>
 
           <p className="mb-10 text-sm text-muted-foreground">
-            Free 30-day trial • No credit card required • 2 workflows free forever
+            No credit card required • 2 workflows free forever
           </p>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             <div className="flex flex-col items-center hover-scale">
               <div className="mb-1 text-3xl font-bold text-foreground">4.9/5</div>
-              <div className="text-sm text-muted-foreground">Capterra Rating</div>
+              <div className="text-sm text-muted-foreground">User Rating</div>
             </div>
             <div className="flex flex-col items-center hover-scale">
               <div className="mb-1 text-3xl font-bold text-foreground">500K+</div>
