@@ -20,51 +20,54 @@ const StepOne = ({ onNext }: { onNext: (data: { departments: string[], goal: str
   ];
 
   const getGoalsForDepartments = () => {
-    const goals = new Set<string>();
-    
-    if (selectedDepartments.includes("marketing")) {
-      goals.add("Generate leads");
-      goals.add("Manage campaigns");
-      goals.add("Track analytics");
-      goals.add("Social media automation");
-    }
-    if (selectedDepartments.includes("it")) {
-      goals.add("Manage devices");
-      goals.add("User onboarding/offboarding");
-      goals.add("System monitoring");
-      goals.add("Security compliance");
-    }
-    if (selectedDepartments.includes("sales")) {
-      goals.add("Lead tracking");
-      goals.add("CRM automation");
-      goals.add("Pipeline management");
-      goals.add("Follow-up automation");
-    }
-    if (selectedDepartments.includes("hr")) {
-      goals.add("Employee onboarding");
-      goals.add("Leave management");
-      goals.add("Performance tracking");
-      goals.add("Recruitment automation");
-    }
-    if (selectedDepartments.includes("operations")) {
-      goals.add("Process automation");
-      goals.add("Workflow optimization");
-      goals.add("Resource management");
-      goals.add("Task tracking");
-    }
-    if (selectedDepartments.includes("finance")) {
-      goals.add("Invoice automation");
-      goals.add("Expense tracking");
-      goals.add("Financial reporting");
-      goals.add("Budget management");
+    // Single department - show specific goals
+    if (selectedDepartments.length === 1) {
+      const dept = selectedDepartments[0];
+      
+      if (dept === "marketing") {
+        return ["Generate leads", "Manage campaigns", "Track analytics", "Social media automation"];
+      }
+      if (dept === "it") {
+        return ["Manage devices", "User onboarding/offboarding", "System monitoring", "Security compliance"];
+      }
+      if (dept === "sales") {
+        return ["Lead tracking", "CRM automation", "Pipeline management", "Follow-up automation"];
+      }
+      if (dept === "hr") {
+        return ["Employee onboarding", "Leave management", "Performance tracking", "Recruitment automation"];
+      }
+      if (dept === "operations") {
+        return ["Process automation", "Workflow optimization", "Resource management", "Task tracking"];
+      }
+      if (dept === "finance") {
+        return ["Invoice automation", "Expense tracking", "Financial reporting", "Budget management"];
+      }
     }
     
-    // Default goals if no specific department goals
-    if (goals.size === 0) {
-      return ["Automate workflows", "Improve productivity", "Reduce costs", "Streamline operations"];
+    // Multiple departments - show cross-functional goals
+    if (selectedDepartments.length === 2) {
+      const depts = selectedDepartments.sort().join("+");
+      
+      if (depts === "hr+it") {
+        return ["Employee onboarding automation", "Access management", "Device provisioning", "Team productivity tracking"];
+      }
+      if (depts === "marketing+sales") {
+        return ["Lead nurturing campaigns", "Sales pipeline automation", "Customer engagement tracking", "Revenue optimization"];
+      }
+      if (depts === "finance+operations") {
+        return ["Budget tracking", "Expense approval workflows", "Invoice processing", "Financial reporting automation"];
+      }
+      // Default for any 2 departments
+      return ["Cross-team collaboration", "Unified workflows", "Data synchronization", "Process optimization"];
     }
     
-    return Array.from(goals);
+    // 3+ departments - show enterprise-level goals
+    if (selectedDepartments.length >= 3) {
+      return ["Enterprise-wide automation", "Unified team operations", "Advanced analytics", "Scalable workflows"];
+    }
+    
+    // Fallback
+    return ["Automate workflows", "Improve productivity", "Reduce costs", "Streamline operations"];
   };
 
   const toggleDepartment = (deptId: string) => {
