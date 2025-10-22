@@ -20,19 +20,51 @@ const StepOne = ({ onNext }: { onNext: (data: { departments: string[], goal: str
   ];
 
   const getGoalsForDepartments = () => {
+    const goals = new Set<string>();
+    
     if (selectedDepartments.includes("marketing")) {
-      return ["Generate leads", "Manage campaigns", "Track analytics", "Social media automation"];
+      goals.add("Generate leads");
+      goals.add("Manage campaigns");
+      goals.add("Track analytics");
+      goals.add("Social media automation");
     }
     if (selectedDepartments.includes("it")) {
-      return ["Manage devices", "User onboarding/offboarding", "System monitoring", "Security compliance"];
+      goals.add("Manage devices");
+      goals.add("User onboarding/offboarding");
+      goals.add("System monitoring");
+      goals.add("Security compliance");
     }
     if (selectedDepartments.includes("sales")) {
-      return ["Lead tracking", "CRM automation", "Pipeline management", "Follow-up automation"];
+      goals.add("Lead tracking");
+      goals.add("CRM automation");
+      goals.add("Pipeline management");
+      goals.add("Follow-up automation");
     }
     if (selectedDepartments.includes("hr")) {
-      return ["Employee onboarding", "Leave management", "Performance tracking", "Recruitment automation"];
+      goals.add("Employee onboarding");
+      goals.add("Leave management");
+      goals.add("Performance tracking");
+      goals.add("Recruitment automation");
     }
-    return ["Automate workflows", "Improve productivity", "Reduce costs", "Streamline operations"];
+    if (selectedDepartments.includes("operations")) {
+      goals.add("Process automation");
+      goals.add("Workflow optimization");
+      goals.add("Resource management");
+      goals.add("Task tracking");
+    }
+    if (selectedDepartments.includes("finance")) {
+      goals.add("Invoice automation");
+      goals.add("Expense tracking");
+      goals.add("Financial reporting");
+      goals.add("Budget management");
+    }
+    
+    // Default goals if no specific department goals
+    if (goals.size === 0) {
+      return ["Automate workflows", "Improve productivity", "Reduce costs", "Streamline operations"];
+    }
+    
+    return Array.from(goals);
   };
 
   const toggleDepartment = (deptId: string) => {
@@ -128,80 +160,124 @@ const StepTwo = ({
 
   const automations = [
     {
-      id: "employee-onboarding",
-      name: "Employee Onboarding Automation",
-      description: "Automatically set up accounts, send welcome emails, and assign tasks",
-      popular: true,
+      id: "client-onboarding",
+      name: "Client Onboarding",
+      description: "Used by 89% of successful businesses",
+      benefit: "Saves 5+ hours/week: Google Forms → HubSpot → Gmail automation",
+      topPick: true,
+      color: "blue",
     },
     {
-      id: "lead-nurturing",
-      name: "Lead Nurturing Campaign",
-      description: "Automatically follow up with leads and track engagement",
-      popular: true,
+      id: "invoice-automation",
+      name: "Invoice Automation",
+      description: "Reduces billing time by 75%",
+      benefit: "Saves 4+ hours/week with automated invoice handling",
+      topPick: false,
+      color: "green",
     },
     {
-      id: "device-management",
-      name: "IT Device Management",
-      description: "Track and manage company devices, software licenses",
-      popular: false,
-    },
-    {
-      id: "approval-workflow",
-      name: "Approval Workflow",
-      description: "Automate approval processes for expenses, time off, and more",
-      popular: false,
+      id: "social-media-posting",
+      name: "Social Media Posting",
+      description: "2x your social engagement",
+      benefit: "Saves 3+ hours/week on social media management",
+      topPick: false,
+      color: "purple",
     },
   ];
 
+  const colorClasses = {
+    blue: "border-blue-500 bg-blue-50 dark:bg-blue-950/20",
+    green: "border-green-500 bg-green-50 dark:bg-green-950/20",
+    purple: "border-purple-500 bg-purple-50 dark:bg-purple-950/20",
+  };
+
+  const iconColorClasses = {
+    blue: "text-blue-500",
+    green: "text-green-500",
+    purple: "text-purple-500",
+  };
+
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold mb-2">Recommended Automations</h2>
+      <div className="text-center">
+        <h2 className="text-2xl font-bold mb-2 flex items-center justify-center gap-2">
+          Recommended Next Steps! <span className="text-2xl">🎯</span>
+        </h2>
         <p className="text-muted-foreground">
-          Based on {departments.join(", ")} • Goal: {goal}
+          Based on your profile, we've selected the perfect workflows to get you started.
         </p>
       </div>
 
-      <div className="space-y-3">
-        {automations.map((automation) => (
-          <button
-            key={automation.id}
-            onClick={() => setSelectedAutomation(automation.id)}
-            className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
-              selectedAutomation === automation.id
-                ? "border-primary bg-primary/5"
-                : "border-border hover:border-primary/50"
-            }`}
-          >
-            <div className="flex items-start justify-between mb-1">
-              <h3 className="font-semibold">{automation.name}</h3>
-              {automation.popular && (
-                <Badge variant="secondary" className="ml-2">Popular</Badge>
-              )}
-            </div>
-            <p className="text-sm text-muted-foreground">{automation.description}</p>
-            {selectedAutomation === automation.id && (
-              <CheckCircle2 className="mt-2 h-5 w-5 text-primary" />
-            )}
-          </button>
-        ))}
+      <div className="flex justify-center mb-4">
+        <div className="h-20 w-20 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center shadow-lg">
+          <svg className="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+        </div>
+      </div>
 
-        <button
-          onClick={() => setSelectedAutomation("custom")}
-          className={`w-full text-left p-4 rounded-lg border-2 border-dashed transition-all ${
-            selectedAutomation === "custom"
-              ? "border-primary bg-primary/5"
-              : "border-border hover:border-primary/50"
-          }`}
-        >
-          <h3 className="font-semibold">🎨 Build a Custom Automation</h3>
-          <p className="text-sm text-muted-foreground">Create your own workflow from scratch</p>
-        </button>
+      <div className="text-center mb-6">
+        <h3 className="text-xl font-bold mb-1">Your Personalized Automation Plan</h3>
+        <p className="text-sm text-muted-foreground">
+          We've analyzed thousands of successful businesses and identified these top workflows for you.
+        </p>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-3">
+        {automations.map((automation) => (
+          <div
+            key={automation.id}
+            className={`relative p-6 rounded-xl border-2 transition-all ${
+              selectedAutomation === automation.id 
+                ? "ring-2 ring-primary ring-offset-2" 
+                : ""
+            } ${colorClasses[automation.color as keyof typeof colorClasses]}`}
+          >
+            {automation.topPick && (
+              <Badge className="absolute -top-2 left-1/2 -translate-x-1/2 bg-primary">
+                Top Pick
+              </Badge>
+            )}
+            
+            <div className="flex items-start gap-3 mb-4">
+              <svg 
+                className={`h-6 w-6 mt-1 ${iconColorClasses[automation.color as keyof typeof iconColorClasses]}`}
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+              </svg>
+              <div>
+                <h4 className="font-semibold text-foreground">{automation.name}</h4>
+                <p className="text-sm text-muted-foreground mt-1">{automation.description}</p>
+              </div>
+            </div>
+
+            <Button
+              onClick={() => setSelectedAutomation(automation.id)}
+              className="w-full mb-3"
+              variant={selectedAutomation === automation.id ? "default" : "secondary"}
+            >
+              {selectedAutomation === automation.id ? "Selected" : "Choose This"}
+            </Button>
+
+            <p className="text-xs text-muted-foreground text-center">
+              {automation.benefit}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center">
+        <Button variant="outline" size="lg">
+          Explore Other Recommended Workflows
+        </Button>
       </div>
 
       <div className="flex gap-3">
         <Button onClick={onBack} variant="outline" className="w-full" size="lg">
-          Back
+          Previous
         </Button>
         <Button
           onClick={() => onNext(selectedAutomation)}
