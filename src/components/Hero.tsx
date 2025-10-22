@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Play } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-8 md:py-12">
       <div className="container mx-auto px-4">
@@ -24,7 +27,11 @@ const Hero = () => {
           </p>
 {/* Button to get started free */}
           <div className="mb-5 flex flex-col gap-4 animate-fade-in sm:flex-row">
-            <Button size="lg" className="text-base font-semibold shadow-lg hover-scale">
+            <Button 
+              size="lg" 
+              className="text-base font-semibold shadow-lg hover-scale"
+              onClick={() => navigate("/auth")}
+            >
               Get Started Free
             </Button>
             <Button size="lg" variant="outline" className="text-base font-semibold hover-scale">
